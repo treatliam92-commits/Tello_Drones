@@ -58,8 +58,10 @@ try:
 
         sendmsg('command', 0)
         sendmsg('takeoff')
-
-        sendmsg ('forward 100')
+        
+        sendmsg('curve 100 100 0 100 0 0 25')
+        sendmsg('curve -100 -100 0 -100 0 0 25')
+        
 
         sendmsg('land')
 
