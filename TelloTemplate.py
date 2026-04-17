@@ -61,7 +61,9 @@ try:
         
         sendmsg('curve 100 100 0 100 0 0 25')
         sendmsg('curve -100 -100 0 -100 0 0 25')
-        
+        sendmsg('back 100')
+        sendmsg('flip b')
+        sendmsg('flip b')
 
         sendmsg('land')
 
