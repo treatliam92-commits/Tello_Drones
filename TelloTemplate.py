@@ -64,7 +64,7 @@ try:
         #Make sure I put the video in our repository
         #Commit message: First hoop video in repository
         #write code below
-        
+        sendmsg('forward 175')
 
         #Comit message: Second hoop - stable - Go
         #Don't Forget to take video of this portion of the competition
