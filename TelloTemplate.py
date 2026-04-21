@@ -30,7 +30,7 @@ def recv():
             break
 
 
-def sendmsg(msg, sleep = 6):
+def sendmsg(msg, sleep = 10):
     print("Sending: " + msg)
     msg = msg.encode(encoding="utf-8")
     sock.sendto(msg, tello_address)
@@ -59,18 +59,18 @@ try:
         sendmsg('command', 0)
         sendmsg('takeoff')
 
-        #Comit message: First hoop - stable - Go 
+        #Comit message: First hoop - stable - Go - DONE
         #Don't Forget to take video of this portion of the competition
         #Make sure I put the video in our repository
         #Commit message: First hoop video in repository
         #write code below
-        sendmsg('forward 175')
+        sendmsg('forward 150')
 
         #Comit message: Second hoop - stable - Go
         #Don't Forget to take video of this portion of the competition
         #Make sure I put the video in our repository
         #Commit message: Second hoop video in repository
-
+        sendmsg('go 190 0 50 75')
 
         #Comit message: Third hoop - stable - curve
         #Don't Forget to take video of this portion of the competition
