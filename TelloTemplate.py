@@ -57,7 +57,9 @@ try:
         print("\nStarting Drone!\n")
 
         sendmsg('command', 0)
+        sendmsg('battery?', 2)
         sendmsg('takeoff')
+
 
         #Comit message: First hoop - stable - Go - DONE
         #Don't Forget to take video of this portion of the competition
@@ -72,10 +74,11 @@ try:
         #Commit message: Second hoop video in repository
         sendmsg('go 190 0 50 75')
 
-        #Comit message: Third hoop - stable - curve
+        #Comit message: Third hoop - stable - curve - negative right positive left
         #Don't Forget to take video of this portion of the competition
         #Make sure I put the video in our repository
         #Commit message: Third hoop video in repository
+        sendmsg('curve 140 130 0 0 260 0 40')
 
 
         #Comit message: Fourth hoop - stable - Go
