@@ -30,7 +30,7 @@ def recv():
             break
 
 
-def sendmsg(msg, sleep = 10):
+def sendmsg(msg, sleep = 6):
     print("Sending: " + msg)
     msg = msg.encode(encoding="utf-8")
     sock.sendto(msg, tello_address)
@@ -60,35 +60,20 @@ try:
         sendmsg('battery?', 2)
         sendmsg('takeoff')
 
+       
+        sendmsg('forward 215', 8)
 
-        #Comit message: First hoop - stable - Go - DONE
-        #Don't Forget to take video of this portion of the competition
-        #Make sure I put the video in our repository
-        #Commit message: First hoop video in repository
-        #write code below
-        sendmsg('forward 150')
+        
+        sendmsg('go 235 0 50 100', 10)
 
-        #Comit message: Second hoop - stable - Go
-        #Don't Forget to take video of this portion of the competition
-        #Make sure I put the video in our repository
-        #Commit message: Second hoop video in repository
-        sendmsg('go 190 0 50 75')
+        
+        sendmsg('curve 140 130 0 0 260 0 40', 20)
 
-        #Comit message: Third hoop - stable - curve - negative right positive left
-        #Don't Forget to take video of this portion of the competition
-        #Make sure I put the video in our repository
-        #Commit message: Third hoop video in repository
-        sendmsg('curve 140 130 0 0 260 0 40')
+        sendmsg('cw 180', 10)
+        
+        sendmsg('go 190 0 -50 75')
 
-
-        #Comit message: Fourth hoop - stable - Go
-        #Don't Forget to take video of this portion of the competition
-        #Make sure I put the video in our repository
-        #Commit message: Fourth hoop video in repository
-
-        #Video of Entire hoop competition
-        #Comit message: Video of entire Hoop competition in repository
-
+       
         sendmsg('land')
 
         print('\nGreat Flight!!!')
