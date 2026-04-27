@@ -85,6 +85,7 @@ try:
         #Don't Forget to take video of this portion of the competition
         #Make sure I put the video in our repository
         #Commit message: Fourth hoop video in repository
+        sendmsg('go -190 0 -50 75')
 
         #Video of Entire hoop competition
         #Comit message: Video of entire Hoop competition in repository
